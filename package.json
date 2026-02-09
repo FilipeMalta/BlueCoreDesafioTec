@@ -1,7 +1,7 @@
 {
   "name": "bluecoredesafiotec",
   "version": "1.0.0",
-  "description": "/\r ├── README.md                          # Documento principal de Estratégia de QA\r ├── docs/\r │   ├── analise-riscos.md             # Análise detalhada de riscos\r │   └── estrategia-testes.md          # Estratégia completa de testes\r ├── testes-manuais/\r │   ├── casos-teste-criacao-ticket.md # Casos de teste: Criação\r │   ├── casos-teste-atualizacao-status.md # Casos de teste: Atualização\r │   └── template-execucao.md          # Template para execução\r ├── testes-api/\r │   ├── collection-postman.json       # Collection Postman (exemplo)\r │   └── cenarios-api.md               # Cenários de teste de API\r └── automacao/\r     ├── README.md                      # Guia de automação\r     └── plano-automacao.md            # Plano de priorização",
+  "description": "QA automation tests with Playwright for ticket management system",
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
