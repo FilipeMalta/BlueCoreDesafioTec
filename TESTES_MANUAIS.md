@@ -20,7 +20,7 @@
 | TC-09: Em andamento → Fechado | Abrir ticket, mudar de Em andamento para Fechado, salvar | Status atualizado para Fechado |
 | TC-10: Aberto → Fechado direto | Abrir ticket Aberto, mudar direto para Fechado, salvar | Status atualizado sem forçar estados intermediários |
 | TC-11: Transição inválida | Abrir ticket Fechado, tentar mudar para Em andamento | Sistema nega, erro "Transição inválida" |
-| TC-12: Status inválido | Tentar mandar status inválido via inspet (backend) | Backend rejeita, ticket mantém status anterior |
+| TC-12: Status inválido | Tentar mandar status inválido via inspect (backend) | Backend rejeita, ticket mantém status anterior |
 | TC-13: Concorrência | Duas abas: Tab A muda status para Em andamento (salva). Tab B muda para Fechado (salva) | Um recebe erro de conflito, nenhum dado é corrompido |
 | TC-14: Apenas status | Abrir ticket, mudar APENAS status (não tocar outros campos), salvar | Apenas status muda, título/descrição/prioridade se mantêm |
 
