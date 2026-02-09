@@ -1,0 +1,10 @@
+import { test, expect } from '@playwright/test';
+import { CriarTicketPage } from '../../pages/CriarTicketPage';
+import { TicketsPage } from '../../pages/TicketsPage';
+import {
+  ticketsValidos,
+  Prioridade,
+  CriarTicketInput,
+  generateTicketWithInvalidData,
+} from '../../fixtures/test-data';
+import { logger, delay } from '../../utils/helpers';

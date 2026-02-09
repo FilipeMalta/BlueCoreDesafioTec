@@ -1,0 +1,19 @@
+# Prettier ignore files
+
+node_modules
+dist
+build
+coverage
+test-results
+playwright-report
+.next
+.nuxt
+.cache
+.vuepress/dist
+.serverless
+.fusebox
+.dynamodb
+.tern-port
+.vscode-test
+.yarn/cache
+.yarn/unplugged

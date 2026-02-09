@@ -1,0 +1,32 @@
+{
+  "name": "bluecoredesafiotec",
+  "version": "1.0.0",
+  "description": "/\r ├── README.md                          # Documento principal de Estratégia de QA\r ├── docs/\r │   ├── analise-riscos.md             # Análise detalhada de riscos\r │   └── estrategia-testes.md          # Estratégia completa de testes\r ├── testes-manuais/\r │   ├── casos-teste-criacao-ticket.md # Casos de teste: Criação\r │   ├── casos-teste-atualizacao-status.md # Casos de teste: Atualização\r │   └── template-execucao.md          # Template para execução\r ├── testes-api/\r │   ├── collection-postman.json       # Collection Postman (exemplo)\r │   └── cenarios-api.md               # Cenários de teste de API\r └── automacao/\r     ├── README.md                      # Guia de automação\r     └── plano-automacao.md            # Plano de priorização",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:e2e": "playwright test tests/e2e",
+    "test:api": "playwright test tests/api --grep @api",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:ci": "CI=true playwright test",
+    "report": "playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FilipeMalta/BlueCoreDesafioTec.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FilipeMalta/BlueCoreDesafioTec/issues"
+  },
+  "homepage": "https://github.com/FilipeMalta/BlueCoreDesafioTec#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.2",
+    "typescript": "^5.9.3"
+  }
+}
