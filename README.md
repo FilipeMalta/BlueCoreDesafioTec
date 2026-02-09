@@ -1,86 +1,50 @@
 # BlueCoreDesafioTec
 
-QA automation tests for Helpdesk ticket management system using Playwright + TypeScript.
+QA automation tests with Playwright for ticket management system.
 
 ## Setup
 
 ```bash
-# Install dependencies
 npm install
-npm ci
-
-# Install Playwright browsers
 npx playwright install
 ```
 
 ## Running Tests
 
 ```bash
-# Run all tests
-npm test
-
-# Run with UI mode (interactive)
-npm run test:ui
-
-# Run with visible browser (headed mode)
-npm run test:headed
-
-# View HTML report
-npm run report
-
-# Run specific test file
-npx playwright test tests/e2e/tickets/criar-ticket.spec.ts
-
-# List available tests
-npx playwright test --list
+npm test              # All tests
+npm run test:ui       # Interactive UI
+npm run test:headed   # Browser visible
+npm run report        # View report
 ```
-
-## Configuration
-
-- **Base URL**: `http://localhost:3000`
-- **Browsers**: Chromium, Firefox
-- **Timeout**: 30 seconds (per test)
 
 ## Project Structure
 
 ```
 tests/
 ├── e2e/tickets/
-│   └── criar-ticket.spec.ts       # Create ticket tests
-├── pages/
-│   ├── BasePage.ts                # Base page class
-│   ├── CriarTicketPage.ts         # Create ticket page
-│   └── TicketsPage.ts             # Tickets list page
-└── fixtures/
-    └── test-data.ts               # Test data
+│   └── criar-ticket.spec.ts
+├── api/
+│   └── jsonplaceholder.spec.ts
+└── pages/
+    ├── BasePage.ts
+    ├── CriarTicketPage.ts
+    └── TicketsPage.ts
 ```
 
-## Page Object Model
+## Tests
 
-Tests follow POM pattern with `BasePage` providing common operations:
-- `navigate(url)`
-- `click(selector)`
-- `fill(selector, text)`
-- `getText(selector)`
-- `isVisible(selector)`
-- `selectOption(selector, value)`
-- `waitFor(selector)`
+- **E2E (UI)**: 6 tests (create ticket, priority, validation, cancel)
+- **API**: 26 tests (GET, POST, PUT, DELETE, validation, performance)
 
-## Test Files
-
-- **criar-ticket.spec.ts**: Create ticket scenarios (TC-01 to TC-06)
-  - Valid data, priority variations, validation failures, cancel flow
-
-Total: 6 tests × 2 browsers = 12 tests
+Total: 66 tests (32 tests × 2 browsers)
 
 ## Requirements
 
 - Node.js 18+
 - npm 10+
-- Git
 
 ## Notes
 
-- Tests expect server running on `http://localhost:3000`
-- TypeScript in non-strict mode
-- No CI/CD pipeline - runs locally only
+- Runs against `http://localhost:3000` (E2E) and JSONPlaceholder API
+- TypeScript non-strict mode

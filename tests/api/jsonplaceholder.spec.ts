@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-// TypeScript interfaces para tipagem
 interface User {
   id: number;
   name: string;
@@ -20,11 +19,6 @@ interface User {
 const BASE_URL = 'https://jsonplaceholder.typicode.com';
 
 test.describe('JSONPlaceholder API - Users Endpoints', () => {
-  
-  // ============================================
-  // GET /users - Listar todos os usuários
-  // ============================================
-  
   test.describe('GET /users', () => {
     
     test('Deve retornar lista de usuários com status 200', async ({ request }) => {
@@ -73,10 +67,6 @@ test.describe('JSONPlaceholder API - Users Endpoints', () => {
     });
   });
   
-  // ============================================
-  // GET /users/:id - Buscar usuário específico
-  // ============================================
-  
   test.describe('GET /users/:id', () => {
     
     test('Deve retornar usuário com ID específico', async ({ request }) => {
@@ -121,10 +111,6 @@ test.describe('JSONPlaceholder API - Users Endpoints', () => {
       expect(user.username).toBe('Bret');
     });
   });
-  
-  // ============================================
-  // POST /users - Criar novo usuário
-  // ============================================
   
   test.describe('POST /users', () => {
     
@@ -198,10 +184,6 @@ test.describe('JSONPlaceholder API - Users Endpoints', () => {
     });
   });
   
-  // ============================================
-  // PUT /users/:id - Atualizar usuário
-  // ============================================
-  
   test.describe('PUT /users/:id', () => {
     
     test('Deve atualizar usuário existente', async ({ request }) => {
@@ -265,10 +247,6 @@ test.describe('JSONPlaceholder API - Users Endpoints', () => {
     });
   });
   
-  // ============================================
-  // DELETE /users/:id - Deletar usuário
-  // ============================================
-  
   test.describe('DELETE /users/:id', () => {
     
     test('Deve deletar usuário existente', async ({ request }) => {
@@ -291,10 +269,6 @@ test.describe('JSONPlaceholder API - Users Endpoints', () => {
       expect(response.headers()['content-type']).toContain('application/json');
     });
   });
-  
-  // ============================================
-  // Testes de validação e erros
-  // ============================================
   
   test.describe('Validação e Tratamento de Erros', () => {
     
@@ -338,10 +312,6 @@ test.describe('JSONPlaceholder API - Users Endpoints', () => {
       expect(response.ok()).toBeTruthy();
     });
   });
-  
-  // ============================================
-  // Testes de performance básica
-  // ============================================
   
   test.describe('Performance Básica', () => {
     

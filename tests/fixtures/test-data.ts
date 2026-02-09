@@ -1,5 +1,3 @@
-// Dados de teste simples
-
 export const ticketsData = [
   {
     titulo: 'Login não funciona',
